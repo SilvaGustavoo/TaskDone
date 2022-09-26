@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    --bg-bar-lateral: #efefef;
+    --bg-cinza-claro: #D9D9D9;
+    color: #000000;
+}
+
+
+
+
+body {
+    position: relative;
+    background: url(../img/fundo.jpg), #000000;
+    background-size: cover;
+    background-position: 0px -50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    display: flex;
+    background-attachment: fixed;
+}
+
+/*-------------- BARRA LATERAL ---------------*/
+
+nav {
+    font-family: 'Inter', sans-serif;
+    width: 490px;
+    height: 100vh;
+    background-color: var(--bg-bar-lateral);
+}
+
+/* ---- Perfil ----*/
+#perfil {
+    padding-top: 39px;
+    margin-left: 31.6px;
+    margin-bottom: 18px;
+    display: flex;
+}
+
+#foto {
+    width: 53px;
+    height: 54px;
+    background-color: #a7a7a7;
+    border-radius: 50%;
+
+}
+
+#perfil article {
+    margin-left: 25px;
+    width: 205px;
+}
+
+#nome {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+#email {
+    font-size: 18px;
+    width: 190px;
+    color: #000000;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.start_atalhos {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.6)
+}
+
+
+/* Atalhos */
+
+#atalhos {
+    display: flex;
+    flex-direction: column;
+}
+
+#atalhos a {
+    padding: 12px 40px 13px 32px;
+    margin-top: 4px;
+    font-size: 22px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+#atalhos .bar_fundo {
+    background-color: var(--bg-cinza-claro);    
+}
+
+#atalhos a .icone {
+    margin-right: 18px;
+}
+
+.start_filtros {
+    margin-top: 37px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Filtros */
+
+#filtros {
+    display: flex;
+    flex-direction: column;
+}
+
+#filtros h3 {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#filtros a {
+    font-size: 22px;
+    margin-bottom: 17px;
+    text-decoration: none;
+    padding-left: 32px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#filtros a .icone {
+    margin-right: 18px;
+    width: 32px;
+}
+
+/* --------------------- MAIN ------------------ */
+
+/* Configuração das Divs */
+main {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Besley', serif;
+    overflow-y: scroll;
+}
+
+main .tarefas_list{
+    margin-left: 54px;
+    height: fit-content;
+}
+
+main .dia_lista {
+    display: flex ;
+    flex-wrap: wrap;
+}
+
+/* Titulos */
+main h1 {
+    color: #FFFFFF;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+main h2 {
+    color: var(--bg-cinza-claro);
+    font-size: 35px;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+main hr {
+    margin-top: 2px;
+    border: 1px solid #A4A2A2;
+    width: 70%;
+    margin-bottom: 15px;
+}
+
+/* Configuração das Tarefas */
+.dia_lista span {
+    min-width: 427px;
+    height: 73px;
+    background: rgba(231, 231, 231, 0.6);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    margin-top: 20px;
+    margin-left: 21px;
+}
+
+/* atribuiçãa = Dia, Prioridade | && | tarefa = Checkbox, Titulo da tarefa, Hora */ 
+
+.dia_lista .atribuicao, .tarefa {
+    margin-left: 20px;
+}
+
+.dia_lista .atribuicao {
+    display: flex;
+    width: 176px;
+    height: 25px;
+    margin-top: 7px;
+    align-items: center;
+}
+
+.dia_lista .atribuicao .data {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.dia_lista .atribuicao .prioridade {
+    background:rgba(247, 239, 49, 0.5);
+    font-size: 18px;
+    width: 85px;
+    padding-left: 8px;
+    padding-right: 9px;
+    padding-bottom: 2px;
+    margin-left: 12px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.dia_lista .tarefa {
+    display: flex;
+    align-items: center;
+    height: 31px;
+}
+
+.dia_lista .checkbox:hover {
+    background-color: green;
+    cursor: pointer;
+}
+
+.dia_lista .checkbox {
+    width: 17.55px;
+    height: 18.25px;
+    background: #FFFFFF;
+    border-radius: 4px;
+}
+
+.dia_lista .tarefa h4 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 25px;
+    width: 270px;
+    margin-top: -2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dia_lista .tarefa img {
+    margin-left: auto;
+    margin-right: 12px;
+}
+
+.dia_lista .tarefa p {
+    margin-left: auto;
+    margin-right: 12px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Botao para adicionar nova tarefa */
+#nova_tarefa {
+    display: flex;
+    position: fixed;
+    bottom: 100px;
+    right: 81px;
+}
+
+/* Formulario da Nova Tarefa */
+
+#novaTarefa {
+    position: fixed;
+    right: 60px;
+    bottom: 0px;
+    width: 475px;
+    height: 568px;
+    background: grey;
+    box-shadow: 0px 4px 20px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 40px 40px 0px 0px;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+#novaTarefa h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 32px;
+}
+
+#novaTarefa input {
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    height: 50px;
+    margin-top: 33px;
+}
+
+/* Inputs */
+#nomeTarefa {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+

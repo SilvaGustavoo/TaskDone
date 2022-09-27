@@ -8,7 +8,7 @@
     
     --bg-bar-lateral: #efefef;
     --bg-cinza-claro: #D9D9D9;
-    color: #000000;
+    
 }
 
 
@@ -23,6 +23,7 @@ body {
     background-blend-mode: multiply;
     display: flex;
     background-attachment: fixed;
+    color: #000000;
 }
 
 /*-------------- BARRA LATERAL ---------------*/
@@ -32,6 +33,10 @@ nav {
     width: 490px;
     height: 100vh;
     background-color: var(--bg-bar-lateral);
+}
+
+nav a {
+    color: #000000;
 }
 
 /* ---- Perfil ----*/
@@ -90,7 +95,7 @@ nav {
 #atalhos a {
     padding: 12px 40px 13px 32px;
     margin-top: 4px;
-    font-size: 22px;
+    font-size: 20px;
     text-decoration: none;
     font-style: normal;
     font-weight: 500;
@@ -185,7 +190,7 @@ main hr {
     margin-bottom: 15px;
 }
 
-/* Configuração das Tarefas */
+/*--- Configuração das Tarefas --*/
 .dia_lista span {
     min-width: 427px;
     height: 73px;
@@ -215,7 +220,7 @@ main hr {
 .dia_lista .atribuicao .data {
     font-weight: normal;
     font-style: italic;
-    font-size: 16px;
+    font-size: 15px;
     margin-right: 5px;
 }
 
@@ -242,6 +247,7 @@ main hr {
 .dia_lista .checkbox:hover {
     background-color: green;
     cursor: pointer;
+    transition: .7s;
 }
 
 .dia_lista .checkbox {
@@ -263,9 +269,10 @@ main hr {
     text-overflow: ellipsis;
 }
 
-.dia_lista .tarefa img {
+.dia_lista .tarefa img { /* Seta */
     margin-left: auto;
     margin-right: 12px;
+    cursor: pointer;
 }
 
 .dia_lista .tarefa p {
@@ -275,12 +282,13 @@ main hr {
     font-weight: 500;
 }
 
-/* Botao para adicionar nova tarefa */
+/* Botao para abrir a opção de adicionar nova tarefa */
 #nova_tarefa {
     display: flex;
     position: fixed;
     bottom: 100px;
     right: 81px;
+    cursor: pointer;
 }
 
 /* Formulario da Nova Tarefa */
@@ -291,11 +299,12 @@ main hr {
     bottom: 0px;
     width: 475px;
     height: 568px;
-    background: grey;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/img/palmeira-fundo.jpg);
+    background-position: 0px -85px;
     box-shadow: 0px 4px 20px 20px rgba(0, 0, 0, 0.4);
     border-radius: 40px 40px 0px 0px;
     font-family: 'Inter', sans-serif;
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -304,26 +313,88 @@ main hr {
     font-size: 30px;
     font-weight: bold;
     margin-top: 30px;
-    margin-bottom: 32px;
+    margin-bottom: 37px;
+    color: #ffffffda;
 }
 
-#novaTarefa input {
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    font-size: 22px;
-    height: 50px;
-    margin-top: 33px;
-}
-
-/* Inputs */
-#nomeTarefa {
+#novaTarefa form {
+    display: flex;
+    flex-wrap: wrap;
     width: 85%;
     margin-left: auto;
     margin-right: auto;
 }
 
+#novaTarefa input {
+    height: 50px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    margin-top: 33px;
+    font-family: 'Inter', sans-serif;
+    background: #A4A2A2;
+    color: #000000;
+}
+
+/* Inputs */
+#nomeTarefa {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 25px ;
+    padding-right: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#dataTarefa {
+    width: 54%;
+    padding-left: 5px;
+}
+
+#horaTarefa {
+    width: 39%;
+    margin-left: auto;
+    margin-right: 0px;
+}
+
+#prioridadeTarefa {
+    width: 40%;
+}
+
+#filtrosTarefa {
+    width: 52%;
+    margin-left: auto;
+    margin-right: 0px;
+}
+
+#novaTarefa option {
+    width: 200px;
+}
 
 
+#novaTarefa #criarTarefa {
+    width: 100%;
+    height: 60px;
+    border-radius: 60px;
+    box-shadow: 0px 4px 30px 5px #A4A2A2;
+    background-color: #A4A2A2;
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 110px;
+    cursor: pointer;
+}
+
+#novaTarefa #criarTarefa:hover {
+    background-color: #e9e9e9;
+    box-shadow: 0px 4px 30px 5px #d8d7d7;
+    transition: .5s;
+}
+
+#novaTarefa input:focus {
+    box-shadow: 0px 4px 30px 5px #A4A2A2;
+    outline: 2.5px rgba(255, 255, 255, 0.389) solid;
+}
 
 

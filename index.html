@@ -42,7 +42,9 @@
     <main>
         
         <h1>Tarefas</h1>
-        <article class="tarefas_list">
+        <article class="tarefas_list" onclick="rmTarefa()">
+
+            <!-- Separa as tarefas pelo dia - Hoje-->
             <h2>Today</h2>
             <hr>
             <section class="dia_lista" id="today">
@@ -82,37 +84,10 @@
                     <section class="tarefa">
                         <div class="checkbox"></div> <h4>Desenvolver Projeto(Stackx)  - ToDo List</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
                     </section>
-                </span>   
-                <span id="span">
-                    <section class="atribuicao">
-                    <p class="data">Today</p> <img src="img/Calendario black.svg" alt="Calendario" title="Data de hoje"> <p class="prioridade">medium</p>
-                    </section>
-
-                    <section class="tarefa">
-                        <div class="checkbox"></div> <h4>Lavar a louça</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
-                    </section>
                 </span> 
-                <span id="span">
-                    <section class="atribuicao">
-                    <p class="data">Today</p> <img src="img/Calendario black.svg" alt="Calendario" title="Data de hoje"> <p class="prioridade">medium</p>
-                    </section>
-
-                    <section class="tarefa">
-                        <div class="checkbox"></div> <h4>Lavar a louça</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
-                    </section>
-                </span>
-                <span id="span">
-                    <section class="atribuicao">
-                    <p class="data">Today</p> <img src="img/Calendario black.svg" alt="Calendario" title="Data de hoje"> <p class="prioridade">medium</p>
-                    </section>
-
-                    <section class="tarefa">
-                        <div class="checkbox"></div> <h4>Lavar a louça</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
-                    </section>
-                </span>   
                 
             </section>
-        
+            <!-- Separa as tarefas pelo dia - Amanhã-->
             <h2>Tomorrow</h2>
             <hr>
             <section class="dia_lista" id="tomorrow">
@@ -153,37 +128,10 @@
                         <div class="checkbox"></div> <h4>Lavar a louça</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
                     </section>
                 </span>   
-                <span id="span">
-                    <section class="atribuicao">
-                    <p class="data">Today</p> <img src="img/Calendario black.svg" alt="Calendario" title="Data de hoje"> <p class="prioridade">medium</p>
-                    </section>
-
-                    <section class="tarefa">
-                        <div class="checkbox"></div> <h4>Lavar a louça</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
-                    </section>
-                </span> 
-                <span id="span">
-                    <section class="atribuicao">
-                    <p class="data">Today</p> <img src="img/Calendario black.svg" alt="Calendario" title="Data de hoje"> <p class="prioridade">medium</p>
-                    </section>
-
-                    <section class="tarefa">
-                        <div class="checkbox"></div> <h4>Lavar a louça</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
-                    </section>
-                </span>
-                <span id="span">
-                    <section class="atribuicao">
-                    <p class="data">Today</p> <img src="img/Calendario black.svg" alt="Calendario" title="Data de hoje"> <p class="prioridade">medium</p>
-                    </section>
-
-                    <section class="tarefa">
-                        <div class="checkbox"></div> <h4>Lavar a louça</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
-                    </section>
-                </span>   
-                
             </section>
 
-            <h2>Tomorrow</h2>
+            <!-- Separa as tarefas pelo dia - Depois de amanhã-->
+            <h2>After Tomorrow</h2>
             <hr>
             <section class="dia_lista" id="tomorrow">
 
@@ -253,17 +201,33 @@
                 
             </section>
         </article>
-        <img src="img/Mais.svg" alt="Mais Tarefas" title="Adicionar nova tarefa" id="nova_tarefa">
+
+        <!-- Botao para abrir o formulário-->
+        <img src="img/Mais.svg" alt="Mais Tarefas" title="Adicionar nova tarefa" id="nova_tarefa" onclick="addTarefa()">
 
     </main>
+    <!-- Formulário para adicionar uma nova tarefa -->
     <section id="novaTarefa">
         <h2>Nova tarefa</h2>
-        <input type="text" name="nomeTarefa" id="nomeTarefa" placeholder="Nome da Tarefa">
-        <input type="text" name="data" id="dataTarefa" placeholder="Data da Tarefa">
-        <input type="text" name="hora" id="horaTarefa" placeholder="Hora">
-        <input type="text" name="prioridade" id="prioridade" placeholder="Prioridade">
-        <input type="text" name="filtros" id="filtros" placeholder="Filtros">
-        <input type="button" value="Adicionar Tarefa">    
+        <form>
+            <input type="text" name="nomeTarefa" id="nomeTarefa" placeholder="Nome da Tarefa">
+            <input type="date" formaction="dd/mm" name="data" id="dataTarefa" value="" min="2022-09-27">
+            <input type="time" name="hora" id="horaTarefa" placeholder="Hora">
+            <input type="text" name="prioridade" id="prioridadeTarefa" placeholder="Prioridade:" list="prioridadesOpcao">
+            <datalist id="prioridadesOpcao">
+                <option value="alta"></option>
+                <option value="média"></option>
+                <option value="baixa"></option>
+            </datalist>
+            <input type="text" name="filtros" id="filtrosTarefa" placeholder="Filtros:" list="filtrosOpcoes">
+            <datalist id="filtrosOpcoes">
+                <option value="Estudos"></option>
+                <option value="Trabalho"></option>
+            </datalist>
+            <input type="button" value="Adicionar Tarefa" id="criarTarefa" onclick="a()">
+        </form>    
     </section>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

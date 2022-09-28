@@ -39,6 +39,11 @@ nav a {
     color: #000000;
 }
 
+#barras {
+    display: none;
+    cursor: pointer;
+}
+
 /* ---- Perfil ----*/
 #perfil {
     padding-top: 39px;

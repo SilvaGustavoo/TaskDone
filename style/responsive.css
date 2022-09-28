@@ -1,0 +1,107 @@
+@media screen and (max-width: 1440px) {
+    nav {
+        width: 450px;
+    }
+    
+    #atalhos a {
+        font-size: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .start_filtros {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    #filtros h3 {
+        font-size: 22px;
+    }
+
+    #filtros a {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1310px) {
+    body {
+        background-size: cover;
+        background-position: 0px 0px;
+    }
+    
+    nav {
+        display: none;
+        position: fixed;
+        width: 400px;
+    }
+
+    #barras {
+        display: block;
+        position: fixed;
+        top: 60px;
+        left: 60px;
+        background-color: rgba(255, 255, 255, 0.09);
+        padding: 10px;
+    }
+    main .tarefas_list {
+        padding-left: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 980px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+    
+    #barras {
+        top: 45px;
+        left: 30px;
+        width: 35px;
+        padding: 0;
+    }
+
+    main .tarefas_list {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px;
+        margin-left: 0px;
+        width: 90%;
+        min-width: auto;
+    }
+
+    main h1 {
+        display: hidden;
+        color: transparent;
+        margin-bottom: 10px;
+        font-size: 2px;
+    }
+
+    main hr {
+        display: none;
+    }
+
+    main h2 {
+        text-align: center;
+    }
+    
+    .dia_lista span {
+        min-width: 100%;
+        height: 60px;
+    }
+
+    #novaTarefa  {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    #nova_tarefa {
+        bottom: 60px;
+        right: 40px;
+    }
+}

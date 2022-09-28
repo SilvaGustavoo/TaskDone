@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="/style/responsive.css">
 
     <title>TaskDone</title>
 </head>
 <body>
+    <img src="img/Barras.svg" alt="Main opções" title="Abrir Opções" id="barras">
     <!--Barra lateral de atalhos e links-->
     <nav>
         <section id="perfil">
@@ -98,7 +100,7 @@
                     </section>
 
                     <section class="tarefa">
-                        <div class="checkbox"></div> <h4>Lavar a louça</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
+                        <div class="checkbox"></div> <h4>Limpar a Casa</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
                     </section>
                 </span>
                 <span id="span">
@@ -107,99 +109,12 @@
                     </section>
 
                     <section class="tarefa">
-                        <div class="checkbox"></div> <h4>Lavar a louça</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
+                        <div class="checkbox"></div> <h4>Ver o Pôr do Sol</h4> <img src="img/seta.svg" alt="seta"> <p>18:00</p>
                     </section>
                 </span>
-                <span id="span">
-                    <section class="atribuicao">
-                    <p class="data">Today</p> <img src="img/Calendario black.svg" alt="Calendario" title="Data de hoje"> <p class="prioridade">medium</p>
-                    </section>
-
-                    <section class="tarefa">
-                        <div class="checkbox"></div> <h4>Lavar a louça</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
-                    </section>
-                </span>
-                <span id="span">
-                    <section class="atribuicao">
-                    <p class="data">Today</p> <img src="img/Calendario black.svg" alt="Calendario" title="Data de hoje"> <p class="prioridade">medium</p>
-                    </section>
-
-                    <section class="tarefa">
-                        <div class="checkbox"></div> <h4>Lavar a louça</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
-                    </section>
-                </span>   
             </section>
 
             <!-- Separa as tarefas pelo dia - Depois de amanhã-->
-            <h2>After Tomorrow</h2>
-            <hr>
-            <section class="dia_lista" id="tomorrow">
-
-                <span id="span">
-                    <section class="atribuicao">
-                    <p class="data">Today</p> <img src="img/Calendario black.svg" alt="Calendario" title="Data de hoje"> <p class="prioridade">medium</p>
-                    </section>
-
-                    <section class="tarefa">
-                        <div class="checkbox"></div> <h4>Lavar a louça</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
-                    </section>
-                </span>
-                <span id="span">
-                    <section class="atribuicao">
-                    <p class="data">Today</p> <img src="img/Calendario black.svg" alt="Calendario" title="Data de hoje"> <p class="prioridade">medium</p>
-                    </section>
-
-                    <section class="tarefa">
-                        <div class="checkbox"></div> <h4>Lavar a louça</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
-                    </section>
-                </span>
-                <span id="span">
-                    <section class="atribuicao">
-                    <p class="data">Today</p> <img src="img/Calendario black.svg" alt="Calendario" title="Data de hoje"> <p class="prioridade">medium</p>
-                    </section>
-
-                    <section class="tarefa">
-                        <div class="checkbox"></div> <h4>Lavar a louça</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
-                    </section>
-                </span>
-                <span id="span">
-                    <section class="atribuicao">
-                    <p class="data">Today</p> <img src="img/Calendario black.svg" alt="Calendario" title="Data de hoje"> <p class="prioridade">medium</p>
-                    </section>
-
-                    <section class="tarefa">
-                        <div class="checkbox"></div> <h4>Lavar a louça</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
-                    </section>
-                </span>   
-                <span id="span">
-                    <section class="atribuicao">
-                    <p class="data">Today</p> <img src="img/Calendario black.svg" alt="Calendario" title="Data de hoje"> <p class="prioridade">medium</p>
-                    </section>
-
-                    <section class="tarefa">
-                        <div class="checkbox"></div> <h4>Lavar a louça</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
-                    </section>
-                </span> 
-                <span id="span">
-                    <section class="atribuicao">
-                    <p class="data">Today</p> <img src="img/Calendario black.svg" alt="Calendario" title="Data de hoje"> <p class="prioridade">medium</p>
-                    </section>
-
-                    <section class="tarefa">
-                        <div class="checkbox"></div> <h4>Lavar a louça</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
-                    </section>
-                </span>
-                <span id="span">
-                    <section class="atribuicao">
-                    <p class="data">Today</p> <img src="img/Calendario black.svg" alt="Calendario" title="Data de hoje"> <p class="prioridade">medium</p>
-                    </section>
-
-                    <section class="tarefa">
-                        <div class="checkbox"></div> <h4>Lavar a louça</h4> <img src="img/seta.svg" alt="seta"> <p>20:00</p>
-                    </section>
-                </span>   
-                
-            </section>
         </article>
 
         <!-- Botao para abrir o formulário-->
@@ -210,16 +125,16 @@
     <section id="novaTarefa">
         <h2>Nova tarefa</h2>
         <form>
-            <input type="text" name="nomeTarefa" id="nomeTarefa" placeholder="Nome da Tarefa">
+            <input type="text" name="nomeTarefa" id="nomeTarefa" placeholder="Nome da Tarefa" autocomplete="off">
             <input type="date" formaction="dd/mm" name="data" id="dataTarefa" value="" min="2022-09-27">
             <input type="time" name="hora" id="horaTarefa" placeholder="Hora">
-            <input type="text" name="prioridade" id="prioridadeTarefa" placeholder="Prioridade:" list="prioridadesOpcao">
+            <input type="text" name="prioridade" id="prioridadeTarefa" placeholder="Prioridade:" list="prioridadesOpcao" autocomplete="off">
             <datalist id="prioridadesOpcao">
                 <option value="alta"></option>
                 <option value="média"></option>
                 <option value="baixa"></option>
             </datalist>
-            <input type="text" name="filtros" id="filtrosTarefa" placeholder="Filtros:" list="filtrosOpcoes">
+            <input type="text" name="filtros" id="filtrosTarefa" placeholder="Filtros:" list="filtrosOpcoes" autocomplete="off">
             <datalist id="filtrosOpcoes">
                 <option value="Estudos"></option>
                 <option value="Trabalho"></option>

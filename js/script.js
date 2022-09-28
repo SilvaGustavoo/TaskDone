@@ -137,7 +137,9 @@ function novoDia(a, b, c, d) {
 // Edições com base na responsividade
 
 if (window.matchMedia("(max-width: 1310px)").matches) {
+
     document.getElementById("barras").addEventListener('click', () => {maisOpcoes(0)})
+
     document.getElementsByTagName('main')[0].addEventListener('click', () => {maisOpcoes(1)})
 }
 
@@ -147,7 +149,7 @@ if (window.matchMedia("(max-width: 450px)").matches) {
 }
 
 function maisOpcoes(somador) {
- 
+    console.log(somador)
     if (somador == 0) {
         document.getElementsByTagName('nav')[0].style="display: block;"
         document.getElementById("barras").style="display: none;"
